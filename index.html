@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ShareKit: renta de equipos compartidos para estudiantes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#catalogo">Ir al catálogo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+<symbol id="repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+<symbol id="cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M1 2h4l2.700 13.400a2 2 0 0 0 2 1.600h8.700a2 2 0 0 0 2-1.600L22 7H6"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.500 8 8 9 4.500-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="tag" viewBox="0 0 24 24"><path d="M3 12 12 3h8v8l-9 9z"/><circle cx="15.500" cy="8.500" r="1"/></symbol>
+<symbol id="wrench" viewBox="0 0 24 24"><path d="M14.500 4.500a4.500 4.500 0 0 0 5.500 5.500L11 19a2.100 2.100 0 0 1-3-3z"/></symbol>
+<symbol id="flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M7.500 15h9"/></symbol>
+<symbol id="cam" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.500"/></symbol>
+<symbol id="laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1"/><path d="M2 20h20"/></symbol>
+<symbol id="phones" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3M4 15h3v5H5a1 1 0 0 1-1-1zM20 15h-3v5h2a1 1 0 0 0 1-1z"/></symbol>
+<symbol id="mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+<symbol id="tablet" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 15 5-6 2 2-5 6-3 1z"/></symbol>
+<symbol id="light" viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4M12 3a6 6 0 0 0-3.500 11c.7.600 1 1.200 1 2h5c0-.8.300-1.400 1-2A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="proj" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="1"/><circle cx="15" cy="12.500" r="2.500"/><path d="M6 20v-3m12 3v-3"/></symbol>
+<symbol id="rec" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><i><svg class="i" aria-hidden="true"><use href="#bolt"/></svg></i>Share<em>Kit</em></a>
+    <nav aria-label="Principal"><ul class="links">
+      <li><a href="#inicio">Inicio</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#catalogo">Catálogo</a></li><li><a href="#autores">Autores</a></li>
+    </ul></nav>
+    <button class="res-nav" id="resnav" type="button">Reservar<b id="count">0</b></button>
+  </div>
+</header>
+<nav class="mnav" aria-label="Secciones"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#catalogo">Catálogo</a><a href="#autores">Autores</a></nav>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="chip mono"><svg class="i" style="width:14px;height:14px" aria-hidden="true"><use href="#clock"/></svg>Proyecto académico · 2026</span>
+      <h1>Renta de equipos <span>compartidos</span> para estudiantes</h1>
+      <p class="lead">Una plataforma colaborativa donde los estudiantes rentan y venden equipo técnico, como cámaras, laptops, herramientas de laboratorio y audio, a precio justo y con acceso para todos.</p>
+      <div class="btns">
+        <a class="btn" href="#catalogo">Ver catálogo<svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
+        <a class="btn o" href="#servicios">Cómo funciona</a>
+      </div>
+    </div>
+    <aside class="cred" id="autores" aria-label="Autores">
+      <p class="mono t">Créditos del sistema</p>
+      <p class="mono s">Autores · Arquitectos del proyecto</p>
+      <ul>
+        <li>Liliana Pacheco<span class="mono">Diseño de UX</span></li>
+        <li>Adriana García<span class="mono">Frontend</span></li>
+        <li>Arantza Díaz<span class="mono">Investigación</span></li>
+        <li>Cale Mancilla<span class="mono">Accesibilidad</span></li>
+      </ul>
+      <div class="live mono"><span class="dot"></span>247 equipos disponibles ahora</div>
+    </aside>
+  </div>
+</section>
+
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <span class="mono lab">02 · Protocolo de inventario</span>
+    <h2>Renta o venta de equipos</h2>
+    <p class="sub">Dos formas de acceder al equipo que necesitas, sin comprar caro ni pedir prestado a desconocidos.</p>
+    <div class="two">
+      <article class="big">
+        <div class="hd"><span class="ic"><svg class="i" aria-hidden="true"><use href="#repeat"/></svg></span>
+          <div><h3>Renta de equipos</h3><p>Alquila por día, semana o ciclo escolar. Devuélvelo cuando termines tu proyecto.</p></div></div>
+        <ul><li>Depósito reembolsable</li><li>Seguro incluido</li><li>Desde $25 MXN/día</li></ul>
+      </article>
+      <article class="big">
+        <div class="hd"><span class="ic"><svg class="i" aria-hidden="true"><use href="#cart"/></svg></span>
+          <div><h3>Venta entre estudiantes</h3><p>Compra equipo de segunda mano verificado por otros estudiantes de tu campus.</p></div></div>
+        <ul><li>Precios justos</li><li>Calidad verificada</li><li>Negociación directa</li></ul>
+      </article>
+    </div>
+    <div class="strip">
+      <div><svg class="i" aria-hidden="true"><use href="#shield"/></svg>Seguro contra daños</div>
+      <div><svg class="i" aria-hidden="true"><use href="#tag"/></svg>Precio estudiante</div>
+      <div><svg class="i" aria-hidden="true"><use href="#wrench"/></svg>Soporte técnico</div>
+      <div><svg class="i" aria-hidden="true"><use href="#flask"/></svg>Equipo de laboratorio</div>
+      <div><svg class="i" aria-hidden="true"><use href="#cam"/></svg>Cámaras y lentes</div>
+      <div><svg class="i" aria-hidden="true"><use href="#laptop"/></svg>Laptops y tablets</div>
+      <div><svg class="i" aria-hidden="true"><use href="#phones"/></svg>Audio y micrófonos</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="catalogo">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="mono lab">03 · Matriz de equipos</span>
+        <h2>Catálogo</h2>
+        <p class="sub" style="margin:0">Explora el equipo disponible. Pasa el cursor sobre una tarjeta para ver sus especificaciones.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar por categoría">
+        <button class="f" type="button" data-c="all" aria-pressed="true">Todos</button>
+        <button class="f" type="button" data-c="Fotografía" aria-pressed="false">Fotografía</button>
+        <button class="f" type="button" data-c="Cómputo" aria-pressed="false">Cómputo</button>
+        <button class="f" type="button" data-c="Ciencias" aria-pressed="false">Ciencias</button>
+        <button class="f" type="button" data-c="Audio" aria-pressed="false">Audio</button>
+      </div>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+<footer class="foot" id="contacto">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a class="brand" href="#inicio"><i><svg class="i" aria-hidden="true"><use href="#bolt"/></svg></i>Share<em>Kit</em></a>
+        <p class="fdesc">Renta y venta de equipos compartidos para estudiantes. Acceso justo a la tecnología que tu proyecto necesita.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <h4 class="mono">Secciones</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#autores">Autores</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4 class="mono">Contacto</h4>
+        <ul>
+          <li><a class="ci" href="mailto:hola@sharekit.mx"><svg class="i" aria-hidden="true"><use href="#mail"/></svg>hola@sharekit.mx</a></li>
+          <li class="ci"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Campus Central, CDMX</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© 2026 ShareKit · Proyecto académico</span>
+      <span class="mono">Diseño mobile first · WCAG 2.2 AA</span>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
